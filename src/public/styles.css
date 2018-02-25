@@ -37,16 +37,100 @@ button:hover {
 
 /* --- View Data CTA --- */
 #here-you-are {
-  background: linear-gradient(115deg,#73B268 0,#5B7F59 100%);
+  background: linear-gradient(115deg, #73B268 0,#5B7F59 100%);
   min-height: 80px;
   width: 100%;
 }
 
 /* --- Set Data CTA --- */
 #tell-us-about-you {
-  background: linear-gradient(135deg,#73B268 0,#5B7F59 100%);
+  background: linear-gradient(115deg, #73B268 0,#5B7F59 100%);
   min-height: 80px;
   width: 100%;
+}
+
+/* --- Form Styles --- */
+#new-form, #user-details {
+  background-color: white;
+  display: inline-block;
+  min-width: 400px;
+  margin-bottom: 50px;
+  padding: 30px 0px;
+
+  position: absolute;
+  top: 10em;
+  left: 0;
+  right: 0;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+.content-column {
+  display: inline-block;
+  min-height: 300px;
+  margin-right: 2%;
+  text-align: left;
+  vertical-align: text-top;
+  width: 45%;
+}
+
+.content-column p {
+  min-height: 200px;
+  line-height: 22px;
+}
+
+.content-column h3 {
+  min-height: 30px;
+}
+
+.content-column img {
+  width: 100%;
+}
+
+.image-column {
+  margin-top: 20px;
+}
+
+input[type='submit'] {
+  background: linear-gradient(115deg, #73B268 0,#5B7F59 100%);
+  border: 0;
+  color: #fff;
+  height: 40px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15);
+  text-transform: uppercase;
+  width: 187px;
+}
+
+input[type='submit']:hover {
+  cursor: pointer;
+}
+
+input[type="password"], input[type="text"] {
+  background-color: transparent;
+  border: 1px solid #dfe1e5;
+  border-width: 0 0 1px 0;
+  font-size: 16px;
+  margin-top: 7px;
+  padding-bottom: 5px;
+  width: 80%;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+ul {
+  color: red;
+  list-style: none;
+  font-size: 12px;
+  height: 30px;
+  text-transform: uppercase;
+  width: 80%
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-left: 10%;
 }
 
 /* --- Toggled Classes --- */
