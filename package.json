@@ -1,0 +1,24 @@
+{
+  "name": "express-pug-form",
+  "version": "1.0.0",
+  "description": "Simple landing page with form modal",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tokap/express-pug-form.git"
+  },
+  "author": "Patrick Allen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tokap/express-pug-form/issues"
+  },
+  "homepage": "https://github.com/Tokap/express-pug-form#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}
