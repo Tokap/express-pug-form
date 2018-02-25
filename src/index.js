@@ -29,7 +29,26 @@ App.get('/user', async (req, res) => {
 })
 
 // - Post User
-App.post('/user', async (req, res) => {})
+App.post('/user', async (req, res) => {
+  const formValidation = Db.validateForm(req.body)
+
+  // If validation is null, form is valid and send back results
+  if (formValidation === null) {
+    const { name, username, password } = req.body
+    Db.updateFormData(name, username, password)
+
+    const responseBody = Object.assign({ status: 200 }, req.body)
+    return res.status(200).json(responseBody)
+  }
+
+  // Otherwise, send back array of errors for User feedback
+  res.status(400).json({
+    err: 'Validation failed in some areas',
+    status: 400,
+    route: 'POST /user',
+    validationResult: formValidation
+  })
+})
 
 // - Sys Alive
 App.get('/sys/alive', (req, res) =>
