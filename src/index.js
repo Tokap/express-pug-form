@@ -9,7 +9,7 @@ const PORT = 3000
 
 // Basic server setup. Configured to handle JSON, use PUG, and know where public
 // files are served from. Mock database functionality is handled in the aptly
-// named file. RESTful conventions being used.
+// named sibling file - database.js. RESTful conventions being used.
 
 //  --- Set JSON & Template Configs ---
 App.use(BodyParser.urlencoded({ extended: true }))
