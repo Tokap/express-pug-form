@@ -113,7 +113,7 @@ function processSaveResponse (response) {
 function saveNewUser (event) {
   event.preventDefault()
 
-  const formFields = getFormFields(formContainer)
+  const formFields = getFormFields(event.target)
   const jsonForm = JSON.stringify(formFields)
   const headers = {
     'user-agent': 'Mozilla/4.0 MDN Example',
@@ -132,7 +132,7 @@ function getUserDetails () {
   .then(user => {
     var { name, username, password } = user
     // If no feilds are missing data, update and display user info
-    if (!name == null && !username == null && !password == null) {
+    if (!(name == null) && !(username == null) && !(password == null)) {
       document.getElementById("name-display").innerHTML = 'Name: ' + name
       document.getElementById("username-display").innerHTML = 'Username: ' + username
       document.getElementById("password-display").innerHTML = 'Password: ' + password
