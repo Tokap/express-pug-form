@@ -14,6 +14,22 @@ html(lang="en")
       href="https://fonts.googleapis.com/css?family=Geo|Varela+Round"
       type="text/css"
     )
+    
+    //- --- Logic Summary
+    //- This entire page is meant to be a display of competency in constructing a
+    //- simple 1 page web app with express and PUG. With that said, it is not  
+    //- meant to be aesthetically impressive and likely reflects the latest trends of the 
+    //- early 2000s.
+
+    //- Special attention was paid to the signup modal to provide top visual
+    //- displays there. This reflects an MVP attitude that it makes more sense 
+    //- to invest time in attaining a new signup than simply displaying existing
+    //- information to a known user. Optimally, both experiences are top notch, 
+    //- but acquisition comes first. 
+
+    //- Ipsum text is used to fill the body and provide something other than a 
+    //- few buttons that link to information modals. A low res picture was also
+    //- included to provide some visual flair.
       
     body
       #landing
@@ -69,7 +85,11 @@ html(lang="en")
             | iceland craft beer retro pickled ramps tattooed poutine. Ennui 
             | literally fanny pack, affogato waistcoat YOLO intelligentsia 
             | williamsburg actually prism bicycle rights woke craft beer deep v.
-
+      
+      //- HTML5 Validation & POST route included (even though we're utilizing
+      //- preventDefault). Front end validation is good for UX, but can't be 
+      //- 100% trusted. As a result, backend validation should always be the 
+      //- source of truth in reviewing data from the client.
       #new-form.hidden
           h2 Create New User
           form(action="/user" method="post")
