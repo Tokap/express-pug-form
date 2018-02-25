@@ -69,3 +69,42 @@ html(lang="en")
             | iceland craft beer retro pickled ramps tattooed poutine. Ennui 
             | literally fanny pack, affogato waistcoat YOLO intelligentsia 
             | williamsburg actually prism bicycle rights woke craft beer deep v.
+
+      #new-form.hidden
+          h2 Create New User
+          form(action="/user" method="post")
+            
+            .form-field
+              label(for="name") Name
+              input(type="text" name="name" maxlength="20" required)
+              ul#name-error
+                
+               
+            .form-field
+              label(for="username") Username
+              input(type="text" name="username" maxlength="20" required)
+              ul#username-error
+              
+            .form-field
+              label(for="password") Password
+              input(
+                type="password"
+                name="password"
+                pattern=".{8,}"
+                title="Must be at least 8 characters"
+                required
+              )
+              ul#password-error
+              
+            #submit-container 
+              input(type="submit" value="Create New User")
+        
+        #user-details.hidden
+          h2 Your Information
+          p#name-display Name: Not Available
+          p#username-display Username: Not Available
+          p#password-display Password: Not Available
+                    
+      script(src="/static/scripts.js")
+                    
+            
