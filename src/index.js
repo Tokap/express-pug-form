@@ -19,7 +19,14 @@ App.set('views', `${__dirname}/templates`)
 App.get('/', (req, res) => res.render('landing', {}))
 
 // - Get User
-App.get('/user', async (req, res) => {})
+App.get('/user', async (req, res) => {
+  try {
+    const userDetails = Db.getFormData()
+    res.status(200).json(userDetails)
+  } catch (err) {
+    res.status(500).json({ err: err, route: 'GET /user' })
+  }
+})
 
 // - Post User
 App.post('/user', async (req, res) => {})
