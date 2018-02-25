@@ -37,6 +37,13 @@ function toggleClass (el, className) {
 }
 
 // - Modal Management
+function toggleDisableButtons (boolean) {
+  var buttons = document.getElementsByTagName('button')
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = boolean
+  }
+}
+
 function hideActiveModal (landingPage) {
   var formContainer = document.getElementById('new-form')
   var userDetails = document.getElementById('user-details')
@@ -44,14 +51,19 @@ function hideActiveModal (landingPage) {
   formContainer.classList.add(HIDE)
   userDetails.classList.add(HIDE)
   landingPage.classList.remove(BLUR)
+
+  toggleDisableButtons(false)
 }
 
 function toggleModal (modalId) {
   var modal = document.getElementById(modalId)
   var landingPage = document.getElementById('landing')
 
+  if (!landingPage.classList.contains(BLUR)) toggleDisableButtons(true)
+
   toggleClass(modal, HIDE)
   toggleClass(landingPage, BLUR)
+
 }
 
 // - Error Management
