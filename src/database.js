@@ -17,3 +17,13 @@ function updateFormData (name, username, password) {
   mockDatabase.password = password
   return true
 }
+
+// --- Validation Helpers
+function containsUpperCase(str) {
+  return (/[A-Z]/.test(str))
+}
+
+function isEmptyOrNull (value) {
+  // Double Equals used for null/undefined check
+  return value == null || value === ''
+}
