@@ -2,7 +2,7 @@
 
 // Limited ES6 usage for largest browser compatability. Arrow syntax used
 // for readability in promise chains - could be transpiled in prod to account
-// for improved ES6 syntax via babel / webpack.
+// for improved ES6 syntax + max compatability via babel / webpack.
 
 // The creation of helpers reused in multiple functions is meant to act as a form
 // of clean code and decoupling. Additionally, by splitting larger events into
@@ -14,10 +14,10 @@
 
 // There is admittedly coupled code in the way the modal system is handled here.
 // For a larger project, this file would also be modular in a dev environment and
-// minified / merged for deployment.
+// minified / merged for production.
 
 // In terms of readability, promise chains are used to prevent callback madness
-// and sections of code are, where possible, grouped by purpose and noted.
+// and sections of code are, where possible, grouped by purpose & noted w /headers.
 
 // --- Helpers and Error Handling
 var HIDE = 'hidden'
