@@ -58,9 +58,11 @@ function hideActiveModal (landingPage) {
 function toggleModal (modalId) {
   var modal = document.getElementById(modalId)
   var landingPage = document.getElementById('landing')
-
+  // Enable buttons on toggle
+  toggleDisableButtons(false)
+  // Then, if we're about to add blur, we need to disable buttons for modal mode
   if (!landingPage.classList.contains(BLUR)) toggleDisableButtons(true)
-
+  // Always toggle the classes for the modal & background
   toggleClass(modal, HIDE)
   toggleClass(landingPage, BLUR)
 
