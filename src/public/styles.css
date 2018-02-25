@@ -1,1 +1,62 @@
 /* Note: Normally this would be it's own directory for organizational purposes */
+
+/* --- Font Normalization & General Styles --- */
+h1,
+h2,
+h3,
+p,
+div,
+button,
+a,
+input,
+label {
+  font-family: 'Varela Round', sans-serif;
+}
+
+#landing {
+  text-align: center;
+}
+
+/* --- CTA Button Styling --- */
+button {
+  display: inline-block;
+  margin: 20px 0;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 32px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
+/* --- View Data CTA --- */
+#here-you-are {
+  background: linear-gradient(115deg,#73B268 0,#5B7F59 100%);
+  min-height: 80px;
+  width: 100%;
+}
+
+/* --- Set Data CTA --- */
+#tell-us-about-you {
+  background: linear-gradient(135deg,#73B268 0,#5B7F59 100%);
+  min-height: 80px;
+  width: 100%;
+}
+
+/* --- Toggled Classes --- */
+/* I attempt to avoid !important delcarations like the plague, but it arguably
+makes sense for a class meant to override everything and hide the element. */
+.hidden {
+  display: none !important;
+}
+
+.blurred {
+  filter: blur(20px);
+  background-color: grey;
+}
