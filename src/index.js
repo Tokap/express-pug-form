@@ -10,22 +10,31 @@ const PORT = 3000
 //  --- Set JSON & Template Configs ---
 App.use(BodyParser.urlencoded({ extended: true }))
 App.use(BodyParser.json())
-App.use('/static', Express.static(__dirname + '/public'))
+App.use('/static', Express.static(`${__dirname}/public`))
 App.set('view engine', 'pug')
-App.set('views', __dirname + '/templates')
+App.set('views', `${__dirname}/templates`)
 
 // --- Routes
-
 // - Render Landing Page
+App.get('/', (req, res) => res.render('landing', {}))
 
 // - Get User
+App.get('/user', async (req, res) => {})
 
 // - Post User
+App.post('/user', async (req, res) => {})
 
 // - Sys Alive
+App.get('/sys/alive', (req, res) =>
+  res.send({ status: 'Test server is running.' })
+)
 
 // --- Setup for `npm run start` command
-
-// - Init Function
+// -Init Function
+function startServer () {
+  console.log(`Listening on Port: ${PORT}`)
+  App.listen(PORT)
+}
 
 // - Start Server
+startServer()
