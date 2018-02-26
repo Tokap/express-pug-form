@@ -1,6 +1,6 @@
 // Note: Normally this would be it's own directory for organizational purposes.
 
-// Limited ES6 usage for largest browser compatability. Arrow syntax used
+// Limited ES6 usage for largest browser compatability. Arrow syntax & fetch used
 // for readability in promise chains - could be transpiled in prod to account
 // for improved ES6 syntax + max compatability via babel / webpack.
 
